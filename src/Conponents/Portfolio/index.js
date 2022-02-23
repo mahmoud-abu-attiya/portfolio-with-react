@@ -1,33 +1,17 @@
 import React, { Component } from 'react';
 import './style.scss';
-import axios from 'axios';
+import img1 from "../../images/portfolio1.jpg"
+import img2 from "../../images/portfolio7.jpg"
+import img3 from "../../images/portfolio3.jpg"
+import img4 from "../../images/portfolio4.jpg"
+import img5 from "../../images/portfolio5.jpg"
+import img6 from "../../images/portfolio6.jpg"
+import img7 from "../../images/portfolio2.jpg"
+import img8 from "../../images/portfolio8.jpg"
 
 class Portfolio extends Component {
-
-  state = {
-    portfolio : []
-  }
-
-  componentDidMount(){
-    axios.get("db.json").then( res =>{this.setState({ portfolio : res.data.portfolio})})
-  }
-
-
-  render(){
-
-    const {portfolio} = this.state;
-    const portfolioList = portfolio.map( (portfolioItem)=>{
-      return(
-      <div className='gallery col-6 col-sm-3' key={portfolioItem.id}>
-        <img key={portfolio.id} src={portfolioItem.image} alt='gimg'></img>
-        <div className='view-overlay'>
-          <button className='btn btn-outline-light'>view pic</button>
-        </div>
-      </div>
-      )
-    })
-
-    return(
+  render() {
+    return (
       <div className='portfolio'>
         <h2>Portfolio</h2>
         <div className="responsive-list">
@@ -37,7 +21,54 @@ class Portfolio extends Component {
           <div className='responsive-itms'>mobile</div>
         </div>
         <div className='container-fluidf row'>
-          {portfolioList}
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img1} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img2} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img3} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img4} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img5} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img6} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img7} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
+          <div className='gallery col-6 col-sm-3'>
+            <img src={img8} alt='gimg'></img>
+            <div className='view-overlay'>
+              <button className='btn btn-outline-light'>view pic</button>
+            </div>
+          </div>
         </div>
       </div>
     )

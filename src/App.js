@@ -5,7 +5,6 @@ import Work from './Conponents/Work';
 import About from './Conponents/About';
 import Portfolio from './Conponents/Portfolio';
 import Index from './Conponents/Index';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
@@ -15,7 +14,7 @@ class App extends Component{
       <BrowserRouter>
         <Navebar />
         <Routes>
-          <Route path="/" element={<Index />}></Route>
+          <Route path="/portfolio-with-react" element={<Index />}></Route>
           <Route path="/github.io/reactProject" element={<Index />}></Route>
           <Route path="/work" element={<Work />}></Route>
           <Route path="/about" element={<About />}></Route>
