@@ -16,7 +16,7 @@ class App extends Component{
         <Routes>
           <Route path="/" element={<Index />}></Route>
           <Route path="/portfolio-with-react" element={<Index />}></Route>
-          <Route path="/github.io/reactProject" element={<Index />}></Route>
+          <Route path="/github.io/portfolio-with-react" element={<Index />}></Route>
           <Route path="/work" element={<Work />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/portfolio" element={<Portfolio />}></Route>
