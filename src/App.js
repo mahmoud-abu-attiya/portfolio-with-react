@@ -14,6 +14,7 @@ class App extends Component{
       <BrowserRouter>
         <Navebar />
         <Routes>
+          <Route path="/" element={<Index />}></Route>
           <Route path="/portfolio-with-react" element={<Index />}></Route>
           <Route path="/github.io/reactProject" element={<Index />}></Route>
           <Route path="/work" element={<Work />}></Route>
